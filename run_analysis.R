@@ -2,7 +2,7 @@ library(plyr)
 library(dplyr)
 
 ## path to the data set, subfolders names, files names
-data_path = "D:\\GIT-PROJECTS\\CourseraCleaningData\\UCI HAR Dataset\\"
+data_path = "UCI HAR Dataset\\"
 subfolders = c("test\\","train\\")
 
 labels_names_file="activity_labels.txt"
