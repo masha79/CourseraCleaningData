@@ -1,7 +1,4 @@
-CourseraCleaningData
-====================
-
-CodeBook
+CourseraCleaningData - CodeBook
 ====================
 
 Resulting data set is derived by processing the Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
@@ -10,7 +7,7 @@ Description of this data collection can be found here:
 
   http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-Data Set Information:
+######Data Set Information:
 
   The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
   Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
@@ -28,21 +25,19 @@ Data Set Information:
   - Its activity label.
   - An identifier of the subject who carried out the experiment. 
  
- [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. 
- Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. 
- International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+######Data Cleaning Steps
 
 During data cleaning the following processing steps were performed:
 
-  1. Training, and test data sets united into a single data set
+1. Training, and test data sets united into a single data set
+2. Only those measurements that are mean and standard deviation for each measurement are taken
+3. Activity labels substitited by activity names    
+4. Resulting data set is processed to get an average value of each measurement for every subject, and every activity
+5. Mesurements names are processed to make them more readable
 
-  2. Only those measurements that are mean and standard deviation for each measurement are taken
-  
-  3. Activity labels substitited by activity names    
-    
-  4. Resulting data set is processed to get an average value of each measurement for every subject, and every activity
-
-  5. Mesurements names are processed to make them more readable
+######Mesurements naming
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
